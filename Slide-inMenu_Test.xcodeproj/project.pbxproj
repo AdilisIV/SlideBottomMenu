@@ -12,6 +12,10 @@
 		CE92A06B1F45B6DD001081AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE92A0691F45B6DD001081AD /* Main.storyboard */; };
 		CE92A06D1F45B6DD001081AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92A06C1F45B6DD001081AD /* Assets.xcassets */; };
 		CE92A0701F45B6DD001081AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE92A06E1F45B6DD001081AD /* LaunchScreen.storyboard */; };
+		CE92A0791F45BA78001081AD /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A0781F45BA78001081AD /* SettingsLauncher.swift */; };
+		CE92A07C1F45C318001081AD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A07B1F45C318001081AD /* SettingCell.swift */; };
+		CE92A07E1F45C36E001081AD /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A07D1F45C36E001081AD /* BaseCell.swift */; };
+		CE92A0811F45C820001081AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A0801F45C820001081AD /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		CE92A06C1F45B6DD001081AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE92A06F1F45B6DD001081AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE92A0711F45B6DD001081AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE92A0781F45BA78001081AD /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		CE92A07B1F45C318001081AD /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		CE92A07D1F45C36E001081AD /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		CE92A0801F45C820001081AD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		CE92A0641F45B6DD001081AD /* Slide-inMenu_Test */ = {
 			isa = PBXGroup;
 			children = (
+				CE92A07F1F45C80F001081AD /* Helpers */,
+				CE92A07A1F45C30B001081AD /* Views */,
+				CE92A0771F45BA5A001081AD /* Controllers */,
 				CE92A0651F45B6DD001081AD /* AppDelegate.swift */,
-				CE92A0671F45B6DD001081AD /* ViewController.swift */,
 				CE92A0691F45B6DD001081AD /* Main.storyboard */,
 				CE92A06C1F45B6DD001081AD /* Assets.xcassets */,
 				CE92A06E1F45B6DD001081AD /* LaunchScreen.storyboard */,
 				CE92A0711F45B6DD001081AD /* Info.plist */,
 			);
 			path = "Slide-inMenu_Test";
+			sourceTree = "<group>";
+		};
+		CE92A0771F45BA5A001081AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE92A0781F45BA78001081AD /* SettingsLauncher.swift */,
+				CE92A0671F45B6DD001081AD /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CE92A07A1F45C30B001081AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE92A07B1F45C318001081AD /* SettingCell.swift */,
+				CE92A07D1F45C36E001081AD /* BaseCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CE92A07F1F45C80F001081AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE92A0801F45C820001081AD /* Extensions.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE92A0681F45B6DD001081AD /* ViewController.swift in Sources */,
+				CE92A0811F45C820001081AD /* Extensions.swift in Sources */,
+				CE92A07C1F45C318001081AD /* SettingCell.swift in Sources */,
 				CE92A0661F45B6DD001081AD /* AppDelegate.swift in Sources */,
+				CE92A07E1F45C36E001081AD /* BaseCell.swift in Sources */,
+				CE92A0791F45BA78001081AD /* SettingsLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
