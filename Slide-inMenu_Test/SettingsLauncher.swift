@@ -39,6 +39,7 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDele
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor.white
+        cv.isScrollEnabled = false
         return cv
     }()
     
