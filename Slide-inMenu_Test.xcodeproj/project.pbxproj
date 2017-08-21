@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE51B8161F4AA6DF00D21666 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51B8151F4AA6DF00D21666 /* TitleCell.swift */; };
 		CE92A0661F45B6DD001081AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A0651F45B6DD001081AD /* AppDelegate.swift */; };
 		CE92A0681F45B6DD001081AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92A0671F45B6DD001081AD /* ViewController.swift */; };
 		CE92A06B1F45B6DD001081AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE92A0691F45B6DD001081AD /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE51B8151F4AA6DF00D21666 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		CE92A0621F45B6DD001081AD /* Slide-inMenu_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slide-inMenu_Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE92A0651F45B6DD001081AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE92A0671F45B6DD001081AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		CE92A07A1F45C30B001081AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE51B8151F4AA6DF00D21666 /* TitleCell.swift */,
 				CE92A07B1F45C318001081AD /* SettingCell.swift */,
 				CE92A07D1F45C36E001081AD /* BaseCell.swift */,
 			);
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE92A0681F45B6DD001081AD /* ViewController.swift in Sources */,
+				CE51B8161F4AA6DF00D21666 /* TitleCell.swift in Sources */,
 				CE92A0811F45C820001081AD /* Extensions.swift in Sources */,
 				CE92A07C1F45C318001081AD /* SettingCell.swift in Sources */,
 				CE92A0661F45B6DD001081AD /* AppDelegate.swift in Sources */,
@@ -342,6 +346,7 @@
 				CE92A0761F45B6DD001081AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

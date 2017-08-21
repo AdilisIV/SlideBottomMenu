@@ -22,14 +22,16 @@ class Setting: NSObject {
 class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     let cellId = "cellId"
+    let titleCellID = "titlecellid"
     let cellHeight: CGFloat = 50.0
     
     let settings: [Setting] = {
+        let setting0 = Setting(name: "Наименование", imageName: "summary")
         let setting1 = Setting(name: "Сводка", imageName: "summary")
         let setting2 = Setting(name: "Финансы", imageName: "finance")
         let setting3 = Setting(name: "Арбитраж", imageName: "arbitrage")
         let setting4 = Setting(name: "Cancel", imageName: "cancel")
-        return [setting1,setting2,setting3,setting4]
+        return [setting0,setting1,setting2,setting3,setting4]
     }()
     
     let blackView = UIView()
@@ -77,16 +79,21 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDele
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return settings.count
+        return settings.count+1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SettingCell
         
-        let setting = settings[indexPath.item]
-        cell.setting = setting
-        
-        return cell
+        if (indexPath.item == 0) {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: titleCellID, for: indexPath) as! TitleCell
+            cell.companyNameString = "COMPANY NAME STRING"
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SettingCell
+            let setting = settings[indexPath.item]
+            cell.setting = setting
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -109,6 +116,7 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDele
         collectionView.delegate = self
         
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(TitleCell.self, forCellWithReuseIdentifier: titleCellID)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -126,7 +134,7 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDele
             
         }) { (completed: Bool) in
             if setting.name != "" && setting.name != "Cancel" {
-                self.homeController?.showControllerForSetting(setting: setting)
+                //self.homeController?.showControllerForSetting(setting: setting)
             }
         }
     }
